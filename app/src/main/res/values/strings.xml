@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Samples for CXX interface/API</string>
+
+    <string name="agora_app_id"><YOUR_APP_ID></string>
+</resources>
