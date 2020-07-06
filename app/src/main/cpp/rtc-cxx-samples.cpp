@@ -19,25 +19,29 @@ public:
 
 public:
     virtual void onJoinChannelSuccess(const char *channel, uid_t uid, int elapsed) {
-        LOGI("join channel success. channel -> %s, uid -> %u", channel, uid);
+        LOGI("join channel success. channel -> %s, uid -> %u, elapsed -> %d", channel, uid, elapsed);
     }
 
     virtual void onLeaveChannel(const RtcStats &stats) {
-        LOGI("on leave channel executed.");
+        LOGI("on leave channel executed");
     }
 
     virtual void onRejoinChannelSuccess(const char* channel, uid_t uid, int elapsed) {
-        LOGI("rejoin channel success. channel -> %s, uid -> %u", channel, uid);
+        LOGI("rejoin channel success. channel -> %s, uid -> %u, elapsed -> %d", channel, uid, elapsed);
     }
 
     virtual void onRemoteAudioStateChanged(uid_t uid,
             REMOTE_AUDIO_STATE state, REMOTE_AUDIO_STATE_REASON reason, int elapsed) {
-        LOGI("remote audio state changed. uid -> %u, state -> %d, reason -> %d", uid, state, reason);
+        LOGI("remote audio state changed. uid -> %u, state -> %d, reason -> %d, elapsed -> %d", uid, state, reason, elapsed);
     }
 
     virtual void onConnectionStateChanged(
             CONNECTION_STATE_TYPE state, CONNECTION_CHANGED_REASON_TYPE reason) {
         LOGI("connection state changed. state -> %d, reason -> %d", state, reason);
+    }
+
+    virtual void onUserJoined(uid_t uid, int elapsed) {
+        LOGI("remote user joined. uid -> %u, elapsed -> %d", uid, elapsed);
     }
 };
 

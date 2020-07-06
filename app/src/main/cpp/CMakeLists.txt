@@ -32,10 +32,10 @@ find_library( # Sets the name of the path variable.
         # you want CMake to locate.
         log)
 
-set(JNILIBS ${CMAKE_CURRENT_SOURCE_DIR}/../jniLibs/${ANDROID_ABI})
+set(AG_RTC_PREBUILT ${CMAKE_CURRENT_SOURCE_DIR}/../prebuilt/${ANDROID_ABI})
 
 add_library(libagora-rtc-sdk SHARED IMPORTED)
-set_target_properties(libagora-rtc-sdk PROPERTIES IMPORTED_LOCATION ${JNILIBS}/libagora-rtc-sdk-jni.so)
+set_target_properties(libagora-rtc-sdk PROPERTIES IMPORTED_LOCATION ${AG_RTC_PREBUILT}/libagora-rtc-sdk.so)
 
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this

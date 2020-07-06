@@ -3,7 +3,7 @@ package io.agora.rtc.cxx.apis.sample;
 public class RtcEngineNative {
     static {
         System.loadLibrary("rtc-cxx-api-samples");
-        System.loadLibrary("agora-rtc-sdk-jni");
+        System.loadLibrary("agora-rtc-sdk");
     }
 
     private static RtcEngineNative instance;
