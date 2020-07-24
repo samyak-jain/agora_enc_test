@@ -37,6 +37,9 @@ set(AG_RTC_PREBUILT ${CMAKE_CURRENT_SOURCE_DIR}/../prebuilt/${ANDROID_ABI})
 add_library(libagora-rtc-sdk SHARED IMPORTED)
 set_target_properties(libagora-rtc-sdk PROPERTIES IMPORTED_LOCATION ${AG_RTC_PREBUILT}/libagora-rtc-sdk.so)
 
+add_library(libagora-crypto SHARED IMPORTED)
+set_target_properties(libagora-crypto PROPERTIES IMPORTED_LOCATION ${AG_RTC_PREBUILT}/libagora-crypto.so)
+
 # Specifies libraries CMake should link to your target library. You
 # can link multiple libraries, such as libraries you define in this
 # build script, prebuilt third-party libraries, or system libraries.

@@ -79,6 +79,8 @@ Java_io_agora_rtc_cxx_apis_sample_RtcEngineNative_nativeJoinChannel(JNIEnv *env,
         if (str_token) {
             env->ReleaseStringUTFChars(token, str_token);
         }
+
+        rtcEngine->setEncryptionMode("aes-128-xts");
     }
 }
 
